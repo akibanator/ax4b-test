@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-const getData = async (req, res) => {
+const getPostData = async (req, res) => {
   const id = req.params.id;
 
   try {
@@ -22,6 +22,19 @@ const getData = async (req, res) => {
   }
 };
 
+const getPosts = async (req, res) => {
+  try {
+    const { data: posts } = await axios.get(
+      `https://jsonplaceholder.typicode.com/posts`,
+    );
+
+    res.send(posts);
+  } catch {
+    res.sendStatus(400);
+  }
+};
+
 module.exports = {
-  getData,
+  getPostData,
+  getPosts,
 };

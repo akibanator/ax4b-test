@@ -7,6 +7,7 @@ router.get("/", (req, res) =>
   res.status(200).send("Hello World, simple router test"),
 );
 
-router.get("/post/:id", postsController.getData);
+router.get("/post/:id", postsController.getPostData);
+router.get("/posts", postsController.getPosts);
 
 module.exports = router;
