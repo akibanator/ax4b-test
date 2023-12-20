@@ -23,7 +23,7 @@ export default async function Posts({ params }) {
         <Box
           paddingTop="20px"
           bgGradient="linear(to-r, green.400, blue.700)"
-          height="100vh"
+          minH="100vh"
         >
           <Center>
             <Card maxW="50%" minW="350px">
