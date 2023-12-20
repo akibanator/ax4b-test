@@ -15,7 +15,7 @@ import {
 export default async function Posts({ params }) {
   try {
     const { data: post } = await axios.get(
-      `http://localhost:3001/post/${params.id}`,
+      `http://backend:3001/post/${params.id}`,
     );
     const comments = post.comments;
     return (
@@ -23,7 +23,7 @@ export default async function Posts({ params }) {
         <Box
           paddingTop="20px"
           bgGradient="linear(to-r, green.400, blue.700)"
-          height="100vh"
+          minH="100vh"
         >
           <Center>
             <Card maxW="50%" minW="350px">

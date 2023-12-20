@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 
 export default async function Posts() {
-  const { data: posts } = await axios.get(`http://localhost:3001/posts`);
+  const { data: posts } = await axios.get(`http://backend:3001/posts`);
   return (
     <div>
       <ul>
